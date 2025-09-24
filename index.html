@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JustStreamIT</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/bestMovie.js" defer></script>
+    <script src="scripts/topMovies.js" defer></script>
+    <script src="scripts/actionMovies.js" defer></script>
+    <script src="scripts/adventureMovies.js" defer></script>
+    <script src="scripts/buttonMore.js" defer></script>
+    <script src="scripts/categoriesChoice.js" defer></script>
+    <script src="scripts/otherMovies.js" defer></script>
+    <script src="scripts/modale.js" defer></script>
+  </head>
+  <body class="antialiased">
+    <div
+      class="mx-auto max-w-[837px] w-[329px] tablet:w-[619px] ordi:w-[837px] min-h-dvh"
+    >
+      <!-- Partie Logo & Menu -->
+
+      <header class="ordi:sticky ordi:top-0 ordi:z-50">
+        <div
+          class="bg-[#61787F] h-[137px] mt-[43px] mx-auto border tablet:h-[137px] ordi:h-[122px] tablet:grid tablet:grid-cols-2"
+        >
+          <div>
+            <img
+              class="block w-45 mx-auto tablet:w-[165px] tablet:absolute tablet:h-[113px] tablet:ml-5 tablet:mt-[15px] ordi:w-[127px] ordi:h-[94px] ordi:mt-4 ordi:ml-[27px]"
+              src="images/logo.png"
+              alt="Affiche"
+            />
+          </div>
+          <div
+            class="hidden font-Oswald font-light text-white tablet:block tablet:absolute tablet:left-[239px] tablet:top-[35px] tablet:text-[40px] ordi:left-[198px]"
+          >
+            Vidéo à la demande
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Partie Meilleur film -->
+
+        <section class="bestMovie">
+          <h1
+            class="my-8 font-Oswald font-semibold text-[32px] text-center mt-6 tablet:text-[40px] tablet:text-left tablet:mt-[23px] ordi:text-5xl ordi:mt[31px]"
+          >
+            Meilleur film
+          </h1>
+          <div
+            class="group relative overflow-hidden border-6 h-[463px] tablet:h-[271px] ordi:h-[369px] tablet:pt-2 ordi:pt-4 font-Oswald"
+          >
+            <div
+              class="absolute w-[298px] h-[241px] top-2 left-2 flex items-center tablet:left-2 ordi:w-[227px] ordi:h-[369px] ordi:pb-7"
+            >
+              <img
+                class="bestImage block w-full h-full object-cover tablet:w-[168px] tablet:h-[246px] ordi:w-[227px] ordi:h-[334px] transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+            </div>
+            <div
+              class="title-bestMovie font-semibold absolute text-[32px] left-2 top-63 tablet:text-[40px] tablet:top-2 tablet:left-[213px] ordi:top-7 ordi:left-[288px] ordi:text-5xl"
+            ></div>
+            <div
+              class="best-description font-extralight absolute text-[16px] top-[299px] left-2 right-4 tablet:text-2xl tablet:left-[213px] tablet:top-20 tablet:right-7 ordi:top-[114px] ordi:text-[28px] ordi:left-[297px] ordi:right-[30px]"
+            ></div>
+            <div>
+              <button
+                class="bg-[#FA0B0B] rounded-3xl font-medium text-[14px] text-white w-[91px] h-10 absolute left-[122px] top-[400px] tablet:w-[123px] tablet:h-[49px] tablet:text-[20px] tablet:top-51 tablet:left-[461px] ordi:top-[265px] ordi:left-[622px] ordi:w-42 ordi:h-17 ordi:text-2xl"
+              >
+                Détails
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Partie Films les mieux notés -->
+        <section class="topMovies">
+          <h1
+            class="my-8 font-Oswald font-semibold text-[32px] text-center mt-6 tablet:text-[40px] tablet:text-left tablet:mt-[23px] ordi:text-5xl ordi:mt[31px]"
+          >
+            Films les mieux notés
+          </h1>
+          <div
+            class="grid grid-cols-1 tablet:grid-cols-2 ordi:grid-cols-3 gap-10 toggle-section"
+          >
+            <!-- Card-1 -->
+            <div
+              class="topMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-1 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 1 -->
+              <h3
+                class="titleMovie-1 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-2 -->
+            <div
+              class="topMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-2 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 2 -->
+              <h3
+                class="titleMovie-2 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Cartes supplémentaires (masquées en mobile) -->
+
+            <!-- Card-3 -->
+            <div
+              class="extra hidden tablet:block topMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-3 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 3 -->
+              <h3
+                class="titleMovie-3 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-4 -->
+            <div
+              class="extra hidden tablet:block topMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-4 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 4 -->
+              <h3
+                class="titleMovie-4 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Cartes supplémentaires (masquées en tablette) -->
+
+            <!-- Card-5 -->
+            <div
+              class="extra hidden ordi:block topMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-5 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 5 -->
+              <h3
+                class="titleMovie-5 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Card-6 -->
+            <div
+              class="extra hidden ordi:block topMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-6 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 6 -->
+              <h3
+                class="titleMovie-6 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Bouton toggle (mobile & tablette only), pleine largeur, au-dessus des overlays -->
+            <div
+              class="ordi:hidden tablet:grid tablet:col-start-1 tablet:col-end-3 flex justify-center"
+            >
+              <button
+                type="button"
+                class="toggle-btn justify-self-center text-white font-medium text-[20px] w-[214px] h-9 font-Oswald bg-[#FA0B0B] rounded-3xl"
+                aria-expanded="false"
+              >
+                Voir plus
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Partie Films action -->
+        <section class="actionMovies">
+          <h1
+            class="my-8 font-Oswald font-semibold text-[32px] text-center mt-6 tablet:text-[40px] tablet:text-left tablet:mt-[23px] ordi:text-5xl ordi:mt[31px]"
+          >
+            Action
+          </h1>
+          <div
+            class="grid grid-cols-1 tablet:grid-cols-2 ordi:grid-cols-3 gap-10 toggle-section"
+          >
+            <!-- Card-1 -->
+            <div
+              class="actionMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-1 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 1 -->
+              <h3
+                class="titleMovie-1 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-2 -->
+            <div
+              class="actionMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-2 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 2 -->
+              <h3
+                class="titleMovie-2 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Cartes supplémentaires (masquées en mobile) -->
+
+            <!-- Card-3 -->
+            <div
+              class="extra hidden tablet:block actionMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-3 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 3 -->
+              <h3
+                class="titleMovie-3 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-4 -->
+            <div
+              class="extra hidden tablet:block actionMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-4 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 4 -->
+              <h3
+                class="titleMovie-4 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Cartes supplémentaires (masquées en tablette) -->
+
+            <!-- Card-5 -->
+            <div
+              class="extra hidden ordi:block actionMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-5 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 5 -->
+              <h3
+                class="titleMovie-5 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-6 -->
+            <div
+              class="extra hidden ordi:block actionMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-6 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 6 -->
+              <h3
+                class="titleMovie-6 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Bouton toggle (mobile & tablette only), pleine largeur, au-dessus des overlays -->
+            <div
+              class="ordi:hidden tablet:grid tablet:col-start-1 tablet:col-end-3 flex justify-center"
+            >
+              <button
+                type="button"
+                class="toggle-btn justify-self-center text-white font-medium text-[20px] w-[214px] h-9 font-Oswald bg-[#FA0B0B] rounded-3xl"
+                aria-expanded="false"
+              >
+                Voir plus
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Partie Films aventure -->
+        <section class="adventureMovies">
+          <h1
+            class="my-8 font-Oswald font-semibold text-[32px] text-center mt-6 tablet:text-[40px] tablet:text-left tablet:mt-[23px] ordi:text-5xl ordi:mt[31px]"
+          >
+            Aventure
+          </h1>
+          <div
+            class="grid grid-cols-1 tablet:grid-cols-2 ordi:grid-cols-3 gap-10 toggle-section"
+          >
+            <!-- Card-1 -->
+            <div
+              class="adventureMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-1 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 1 -->
+              <h3
+                class="titleMovie-1 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-2 -->
+            <div
+              class="adventureMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-2 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 2 -->
+              <h3
+                class="titleMovie-2 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Cartes supplémentaires (masquées en mobile) -->
+
+            <!-- Card-3 -->
+            <div
+              class="extra hidden tablet:block adventureMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-3 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 3 -->
+              <h3
+                class="titleMovie-3 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-4 -->
+            <div
+              class="extra hidden tablet:block adventureMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-4 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 4 -->
+              <h3
+                class="titleMovie-4 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Cartes supplémentaires (masquées en tablette) -->
+
+            <!-- Card-5 -->
+            <div
+              class="extra hidden ordi:block adventureMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-5 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 5 -->
+              <h3
+                class="titleMovie-5 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-6 -->
+            <div
+              class="extra hidden ordi:block adventureMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-6 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 6 -->
+              <h3
+                class="titleMovie-6 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Bouton toggle (mobile & tablette only), pleine largeur, au-dessus des overlays -->
+            <div
+              class="ordi:hidden tablet:grid tablet:col-start-1 tablet:col-end-3 flex justify-center"
+            >
+              <button
+                type="button"
+                class="toggle-btn justify-self-center text-white font-medium text-[20px] w-[214px] h-9 font-Oswald bg-[#FA0B0B] rounded-3xl"
+                aria-expanded="false"
+              >
+                Voir plus
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Partie Autres Films -->
+        <section class="otherMovies">
+          <div class="grid grid-cols-1 tablet:grid-cols-5 ordi:mt-5">
+            <h1
+              class="my-8 col-start-1 font-Oswald font-semibold text-[32px] text-center mt-6 tablet:text-[40px] tablet:text-left tablet:mt-[23px] ordi:text-5xl ordi:mt[31px]"
+            >
+              Autres:
+            </h1>
+            <!-- Choix des autres catégories -->
+            <!-- DROPDOWN CATÉGORIES -->
+            <div
+              class="flex mx-auto tablet:my-auto tablet:col-start-2 tablet:col-end-4 tablet:mx-0"
+            >
+              <div class="relative inline-block" id="genresDropdownRoot">
+                <!-- Bouton (affiche la catégorie active) -->
+                <button
+                  id="genresBtn"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  class="w-[229px] h-[60.5px] border border-black bg-white px-3 pt-[6px] flex justify-between tablet:w-[241.85px] tablet:h-[60.3px] ordi:w-101 ordi:h-[78.43px] ordi:pt-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black/30"
+                >
+                  <span
+                    id="genresBtnLabel"
+                    class="font-Oswald font-semibold text-[32px] leading-none truncate ordi:text-4xl"
+                  ></span>
+                  <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Menu -->
+                <div
+                  id="genresMenu"
+                  class="hidden absolute mt-2 w-[229px] origin-top-right bg-white shadow-lg z-50 border border-black tablet:w-101"
+                  role="menu"
+                  aria-labelledby="genresBtn"
+                >
+                  <ul
+                    id="genresList"
+                    class="max-h-96 overflow-auto divide-y divide-black"
+                  >
+                    <li>
+                      <button
+                        class="dropdown-item"
+                        type="button"
+                        role="menuitemradio"
+                        aria-checked="true"
+                        aria-selected="true"
+                        data-name="Action"
+                      >
+                        Action
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        class="dropdown-item"
+                        type="button"
+                        role="menuitemradio"
+                        aria-checked="false"
+                        aria-selected="false"
+                        data-name="Comédie"
+                      >
+                        Comédie
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        class="dropdown-item"
+                        type="button"
+                        role="menuitemradio"
+                        aria-checked="false"
+                        aria-selected="false"
+                        data-name="Aventure"
+                      >
+                        Aventure
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 tablet:grid-cols-2 ordi:grid-cols-3 gap-10 toggle-section mt-8 tablet:mt-0 ordi:mt-2"
+          >
+            <!-- Card-1 -->
+            <div
+              class="otherMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-1 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 1 -->
+              <h3
+                class="titleMovie-1 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-2 -->
+            <div
+              class="otherMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-2 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 2 -->
+              <h3
+                class="titleMovie-2 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Cartes supplémentaires (masquées en mobile) -->
+
+            <!-- Card-3 -->
+            <div
+              class="extra hidden tablet:block otherMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-3 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 3 -->
+              <h3
+                class="titleMovie-3 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-4 -->
+            <div
+              class="extra hidden tablet:block otherMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-4 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 4 -->
+              <h3
+                class="titleMovie-4 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Cartes supplémentaires (masquées en tablette) -->
+
+            <!-- Card-5 -->
+            <div
+              class="extra hidden ordi:block otherMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-5 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 5 -->
+              <h3
+                class="titleMovie-5 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+
+            <!-- Card-6 -->
+            <div
+              class="extra hidden ordi:block otherMovies group relative w-[329px] h-[318px] font-Oswald text-white overflow-hidden tablet:w-[295px] tablet:h-[286px] ordi:w-[252px] ordi:h-[252px]"
+            >
+              <!-- Image -->
+              <img
+                class="image-6 text-black block w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src="images/affiche.png"
+                alt="Affiche"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-x-0 h-[131.72px] bg-black/50 top-11 tablet:h-[118px] tablet:top-10 ordi:h-[102px] ordi:top-[34px]"
+              ></div>
+
+              <!-- Titre du film 6 -->
+              <h3
+                class="titleMovie-6 absolute text-2xl top-[65px] left-7 tablet:top-[59px] tablet:left-6 ordi:top-[51px] ordi:left-[21px]"
+              >
+                Chargement...
+              </h3>
+
+              <!-- Bouton -->
+              <button
+                class="absolute w-[105.75px] h-[32.28px] bg-[#2D2C2C] rounded-3xl font-medium text-[14px] top-[130px] right-[17px] tablet:top-[115px] tablet:right-[15.2px] ordi:top-24 ordi:right-[13px]"
+              >
+                Détails
+              </button>
+            </div>
+            <!-- Bouton toggle (mobile & tablette only), pleine largeur, au-dessus des overlays -->
+            <div
+              class="ordi:hidden tablet:grid tablet:col-start-1 tablet:col-end-3 flex justify-center"
+            >
+              <button
+                type="button"
+                class="toggle-btn justify-self-center text-white font-medium text-[20px] w-[214px] h-9 font-Oswald bg-[#FA0B0B] rounded-3xl"
+                aria-expanded="false"
+              >
+                Voir plus
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="modal">
+          <!-- Overlay noir -->
+          <div
+            id="bestMovieModal"
+            class="fixed inset-0 bg-black/60 hidden justify-center items-center z-50 overflow-y-auto"
+          >
+            <!-- Conteneur modale -->
+            <div
+              class="relative mx-auto my-10 font-Oswald w-[329px] max-h-[90vh] overflow-y-auto border-6 bg-white p-10 tablet:w-126.5 tablet:max-h-[85vh] ordi:w-194.5 ordi:h-[930px] ordi:relative"
+            >
+              <!-- Bouton croix (mobile + tablette uniquement) -->
+              <button
+                id="movieModalCloseX"
+                class="absolute top-3 right-3 text-[#FA0B0B] text-[32px] ordi:hidden"
+                aria-label="Fermer"
+                type="button"
+              >
+                ✕
+              </button>
+
+              <!-- Bloc infos haut -->
+              <div class="mb-5 ordi:absolute">
+                <h2
+                  id="mm-title"
+                  class="font-semibold text-[40px] tablet:text-5xl"
+                >
+                  The Big Lebowski
+                </h2>
+                <p
+                  id="mm-year-genres"
+                  class="font-semibold text-[18px] tablet:text-2xl"
+                >
+                  1998 - Comedy, Crime, Sport
+                </p>
+                <p
+                  id="mm-rating-duration-country"
+                  class="font-semibold text-[18px] tablet:text-2xl"
+                >
+                  PG-13 - 117 minutes (USA / UK)
+                </p>
+                <p
+                  id="mm-imdb"
+                  class="font-semibold text-[18px] tablet:text-2xl"
+                >
+                  IMDB score: 8.1/10
+                </p>
+                <p
+                  id="mm-boxoffice"
+                  class="font-semibold text-[18px] tablet:text-2xl"
+                >
+                  Recettes au box-office: $48.2m
+                </p>
+
+                <p class="font-semibold text-[18px] tablet:text-2xl mt-20">
+                  Réalisé par:
+                </p>
+                <p
+                  id="mm-directors"
+                  class="font-light text-[18px] mb-4 tablet:text-2xl"
+                >
+                  Joel Cohen, Ethan Cohen
+                </p>
+              </div>
+
+              <!-- Résumé -->
+              <div
+                class="ordi:absolute ordi:top-[290px] ordi:py-[100px] ordi:left-[40px] ordi:right-[35px]"
+              >
+                <p
+                  id="mm-summary"
+                  class="font-light text-[18px] mb-6 tablet:text-2xl"
+                >
+                  When "the dude" Lebowski is mistaken for a millionaire
+                  Lebowski...
+                </p>
+              </div>
+
+              <!-- Affiche -->
+              <div
+                class="mb-6 ordi:absolute ordi:w-[227px] ordi:h-[334px] ordi:top-[30px] ordi:right-[34px]"
+              >
+                <img
+                  id="mm-poster"
+                  src="images/affiche.png"
+                  alt="Affiche"
+                  class="w-full h-auto"
+                />
+              </div>
+
+              <!-- Acteurs -->
+              <div class="ordi:absolute ordi:top-[500px]">
+                <p class="font-semibold text-[18px] mb-4 tablet:text-2xl">
+                  Avec
+                </p>
+                <p
+                  id="mm-actors"
+                  class="font-light text-[18px] tablet:text-2xl"
+                >
+                  Jeff Bridges, John Goodman, Steve Buscemi, Julianne Moore...
+                </p>
+              </div>
+
+              <!-- Bouton Fermer -->
+              <div class="ordi:absolute ordi:mb-40">
+                <button
+                  id="movieModalCloseBtn"
+                  type="button"
+                  class="hidden ordi:block ordi:absolute ordi:top-[720px] ordi:w-[214px] ordi:b-40 ordi:h-9 ordi:rounded-3xl ordi:bg-[#FA0B0B] ordi:text-white ordi:text-[20px] ordi:font-medium ordi:left-[250px]"
+                >
+                  Fermer
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="mt-50">
+        <div class="hidden ordi:block h-60 border bg-black/50"></div>
+      </footer>
+    </div>
+  </body>
+</html>

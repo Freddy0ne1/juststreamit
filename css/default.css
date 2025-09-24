@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+/* Ajout de la police Oswald */
+@theme {
+  --color-primary-100: #ede0d4;
+  --color-primary-200: #e6ccb2;
+  --color-primary-300: #ddb892;
+  --color-primary-400: #b08968;
+  --color-primary-500: #9c6644;
+  --color-primary-600: #7f5539;
+  --font-Oswald: "Oswald", sans-serif;
+  --font-Merriweather: "Meriweather", serif;
+
+  --breakpoint-*: initial;
+  --breakpoint-mobile: 29rem;
+  --breakpoint-tablet: 50rem;
+  --breakpoint-ordi: 66rem;
+}
+
+/* styles pour les boutons du menu déroulant */
+.dropdown-item {
+  @apply w-[229px] h-[60.5px] px-3 text-left flex items-center
+         bg-white transition font-Oswald font-semibold text-[32px]
+         hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-black/30
+         aria-selected:bg-gray-100 aria-selected:font-semibold;
+
+  /* responsive */
+  @apply tablet:w-101;
+}
