@@ -1,5 +1,5 @@
-/code/*
+/code/
 package-lock.json
 package.json
-/.vscode/*
-/node_modules/*
+/.vscode/
+/node_modules/
