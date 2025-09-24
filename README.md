@@ -49,6 +49,8 @@ npx @tailwindcss/cli -i ./src/default.css -o ./src/style.css --watch
 
 👉 Cela génère automatiquement **`style.css`** que vous pourrez inclure dans votre HTML.
 
+⚡ Important : Pour profiter pleinement de Tailwind, je vous invite à télécharger l’extension **Tailwind CSS IntelliSense** dans **VS Code** (autocomplétion + suggestions).
+
 ---
 
 ✅ Vous pouvez maintenant utiliser toutes les classes utilitaires de **Tailwind CSS** !  
