@@ -5,38 +5,38 @@
 
   // Récupère le détail complet d’un film via son id.
   const getMovieDetail = async (id) => {
-    const r = await fetch(url + id); // ex: ".../titles/1234"
+    const r = await fetch(url + id);
     const detail = await r.json();
     return detail;
   };
 
-  // Met une image (affiche) dans un <img> donné.
-  const setImage = (selector, src, alt = "Affiche") => {
-    const img = document.querySelector(selector);
-    if (img) {
-      img.src = src || "";
-      img.alt = alt || "Affiche";
-    }
-  };
-
   // ---------------------------------------------
-  // AFFICHAGE "MEILLEUR FILM"
+  // AFFICHAGE DU "MEILLEUR FILM"
   // ---------------------------------------------
 
-  // Remplit le titre (depuis la liste) et le résumé (depuis le détail).
-  const fillBestTexts = (title, detail) => {
+  // Remplit le titre et le résumé du meilleur film.
+  const fillBestTexts = (movie) => {
     const titleEl = document.querySelector(".title-bestMovie");
-    if (titleEl) titleEl.textContent = title || "";
+    if (titleEl) titleEl.textContent = movie.title || "";
 
     const descEl = document.querySelector(".best-description");
     if (descEl) {
-      // Le long résumé vient du détail
       descEl.textContent =
-        detail.long_description || detail.description || detail.summary || "";
+        movie.long_description || movie.description || movie.summary || "";
     }
   };
 
-  // Branche le bouton "Détails" du bloc "Meilleur film".
+  // Met l’affiche dans l’image correspondante.
+  const fillBestImage = (movie) => {
+    const img = document.querySelector(".bestImage");
+    if (img) {
+      img.src = movie.image_url;
+      img.alt = movie.title;
+      img.dataset.movieId = movie.id; // utile pour ouvrir la modale
+    }
+  };
+
+  // Prépare le bouton "Détails" avec l’id du film.
   const attachBestButton = (id) => {
     const btn = document.querySelector(".bestMovie button");
     if (btn) {
@@ -45,29 +45,28 @@
     }
   };
 
-  // Programme principal : charge le meilleur film et remplit la section.
+  // ---------------------------------------------
+  // PROGRAMME PRINCIPAL
+  // ---------------------------------------------
+
   const loadBestMovie = async () => {
-    // 1) On récupère la liste triée
+    // 1) On prend le premier film de la liste
     const r = await fetch(urlBestMovie);
     const data = await r.json();
-    const bestMovie = data.results[0]; // objet "liste"
-    const id = bestMovie.id;
+    const bestMovieListItem = data.results[0]; // contient id et titre
+    const id = bestMovieListItem.id;
 
-    // 2) On récupère le DÉTAIL (pour le résumé + image)
+    // 2) On va chercher le détail complet avec l’id
     const detail = await getMovieDetail(id);
 
-    // 3) Texte (titre depuis la liste, résumé depuis le détail)
-    fillBestTexts(bestMovie.title, detail);
+    // 3) On remplit le titre, le résumé et l’image
+    fillBestTexts(detail);
+    fillBestImage(detail);
 
-    // 4) Image (depuis le détail)
-    setImage(".bestImage", detail.image_url, detail.title);
-    const img = document.querySelector(".bestImage");
-    if (img) img.dataset.movieId = id;
-
-    // 5) Bouton "Détails"
+    // 4) On prépare le bouton "Détails"
     attachBestButton(id);
   };
 
-  // Lance le rendu du meilleur film.
+  // Lancer le rendu du meilleur film
   loadBestMovie();
 })();

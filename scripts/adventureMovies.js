@@ -29,7 +29,7 @@
   };
 
   // ---------------------------------------------
-  // AFFICHAGE D’UNE CARTE AVENTURE
+  // AFFICHAGE D’UNE CARTE ADVENTURE
   // ---------------------------------------------
 
   // Met l’affiche (image) du film dans l’<img> de la carte aventure.
