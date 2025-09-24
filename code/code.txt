@@ -1,2 +1,2 @@
 npx @tailwindcss/cli -i ./css/default.css -o ./src/style.css --watch
-dd
+dddss
