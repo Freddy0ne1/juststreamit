@@ -8,7 +8,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-600: oklch(57.7% 0.245 27.325);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -187,9 +186,6 @@
   }
 }
 @layer utilities {
-  .pointer-events-none {
-    pointer-events: none;
-  }
   .absolute {
     position: absolute;
   }
@@ -204,9 +200,6 @@
   }
   .inset-x-0 {
     inset-inline: calc(var(--spacing) * 0);
-  }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
   }
   .top-2 {
     top: calc(var(--spacing) * 2);
@@ -231,9 +224,6 @@
   }
   .top-\[400px\] {
     top: 400px;
-  }
-  .right-2 {
-    right: calc(var(--spacing) * 2);
   }
   .right-3 {
     right: calc(var(--spacing) * 3);
@@ -313,6 +303,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -322,14 +315,14 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
   .h-60 {
     height: calc(var(--spacing) * 60);
   }
   .h-\[32\.28px\] {
     height: 32.28px;
-  }
-  .h-\[33px\] {
-    height: 33px;
   }
   .h-\[60\.5px\] {
     height: 60.5px;
@@ -370,9 +363,6 @@
   .w-45 {
     width: calc(var(--spacing) * 45);
   }
-  .w-\[33px\] {
-    width: 33px;
-  }
   .w-\[91px\] {
     width: 91px;
   }
@@ -397,11 +387,20 @@
   .max-w-\[837px\] {
     max-width: 837px;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink-0 {
     flex-shrink: 0;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .origin-top-right {
     transform-origin: top right;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -449,9 +448,6 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
@@ -482,6 +478,9 @@
   .bg-\[\#FA0B0B\] {
     background-color: #FA0B0B;
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-black\/50 {
     background-color: color-mix(in srgb, #000 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -494,9 +493,6 @@
       background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
     }
   }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
@@ -506,14 +502,8 @@
   .object-cover {
     object-fit: cover;
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
-  }
-  .p-30 {
-    padding: calc(var(--spacing) * 30);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -536,10 +526,6 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[14px\] {
     font-size: 14px;
@@ -585,11 +571,11 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-gray-500 {
-    color: var(--color-gray-500);
-  }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -603,11 +589,18 @@
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .ring-black {
+    --tw-ring-color: var(--color-black);
+  }
   .ring-black\/20 {
     --tw-ring-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-ring-color: color-mix(in oklab, var(--color-black) 20%, transparent);
     }
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -647,13 +640,6 @@
       }
     }
   }
-  .hover\:text-black {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-black);
-      }
-    }
-  }
   .focus\:ring-2 {
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -674,19 +660,9 @@
       outline-style: none;
     }
   }
-  .aria-expanded\:rotate-180 {
-    &[aria-expanded="true"] {
-      rotate: 180deg;
-    }
-  }
   .tablet\:absolute {
     @media (width >= 50rem) {
       position: absolute;
-    }
-  }
-  .tablet\:sticky {
-    @media (width >= 50rem) {
-      position: sticky;
     }
   }
   .tablet\:top-2 {
@@ -817,11 +793,6 @@
   .tablet\:grid {
     @media (width >= 50rem) {
       display: grid;
-    }
-  }
-  .tablet\:hidden {
-    @media (width >= 50rem) {
-      display: none;
     }
   }
   .tablet\:h-\[49px\] {
@@ -1280,107 +1251,6 @@
       color: var(--color-white);
     }
   }
-  .\[\&\>li\>button\]\:flex {
-    &>li>button {
-      display: flex;
-    }
-  }
-  .\[\&\>li\>button\]\:h-\[60\.5px\] {
-    &>li>button {
-      height: 60.5px;
-    }
-  }
-  .\[\&\>li\>button\]\:w-\[229px\] {
-    &>li>button {
-      width: 229px;
-    }
-  }
-  .\[\&\>li\>button\]\:items-center {
-    &>li>button {
-      align-items: center;
-    }
-  }
-  .\[\&\>li\>button\]\:bg-white {
-    &>li>button {
-      background-color: var(--color-white);
-    }
-  }
-  .\[\&\>li\>button\]\:px-3 {
-    &>li>button {
-      padding-inline: calc(var(--spacing) * 3);
-    }
-  }
-  .\[\&\>li\>button\]\:text-left {
-    &>li>button {
-      text-align: left;
-    }
-  }
-  .\[\&\>li\>button\]\:font-Oswald {
-    &>li>button {
-      font-family: var(--font-Oswald);
-    }
-  }
-  .\[\&\>li\>button\]\:text-\[32px\] {
-    &>li>button {
-      font-size: 32px;
-    }
-  }
-  .\[\&\>li\>button\]\:font-semibold {
-    &>li>button {
-      --tw-font-weight: var(--font-weight-semibold);
-      font-weight: var(--font-weight-semibold);
-    }
-  }
-  .\[\&\>li\>button\]\:transition {
-    &>li>button {
-      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-      transition-duration: var(--tw-duration, var(--default-transition-duration));
-    }
-  }
-  .tablet\:\[\&\>li\>button\]\:w-101 {
-    @media (width >= 50rem) {
-      &>li>button {
-        width: calc(var(--spacing) * 101);
-      }
-    }
-  }
-  .\[\&\>li\>button\:focus\]\:ring-2 {
-    &>li>button:focus {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .\[\&\>li\>button\:focus\]\:ring-black\/30 {
-    &>li>button:focus {
-      --tw-ring-color: color-mix(in srgb, #000 30%, transparent);
-      @supports (color: color-mix(in lab, red, red)) {
-        --tw-ring-color: color-mix(in oklab, var(--color-black) 30%, transparent);
-      }
-    }
-  }
-  .\[\&\>li\>button\:focus\]\:outline-none {
-    &>li>button:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-    }
-  }
-  .\[\&\>li\>button\:hover\]\:bg-gray-300 {
-    &>li>button:hover {
-      background-color: var(--color-gray-300);
-    }
-  }
-  .\[\&\>li\>button\[aria-selected\=\'true\'\]\]\:bg-gray-100 {
-    &>li>button[aria-selected='true'] {
-      background-color: var(--color-gray-100);
-    }
-  }
-  .\[\&\>li\>button\[aria-selected\=\'true\'\]\]\:font-semibold {
-    &>li>button[aria-selected='true'] {
-      --tw-font-weight: var(--font-weight-semibold);
-      font-weight: var(--font-weight-semibold);
-    }
-  }
 }
 @layer theme, base, components, utilities;
 @layer theme;
@@ -1661,6 +1531,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1701,6 +1576,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
