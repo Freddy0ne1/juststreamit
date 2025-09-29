@@ -118,13 +118,17 @@
   };
 
   // -------------------------------------------------
-  // DÉLÉGATION : tout bouton avec data-movie-id ouvre la modale
+  // DÉLÉGATION : SEULEMENT image .bestImage OU bouton[data-movie-id]
   // -------------------------------------------------
   document.addEventListener("click", (e) => {
-    const btn = e.target.closest("button[data-movie-id]");
-    if (!btn) return; // on ignore les clics ailleurs
-    const id = btn.dataset.movieId;
-    if (!id) return; // si pas d'id, on ne fait rien
-    openMovieModalById(id); // on ouvre la modale pour cet id
+    const trigger = e.target.closest(
+      "img[data-movie-id], button[data-movie-id]"
+    );
+    if (!trigger) return; // clic ailleurs ignoré
+
+    const id = trigger.dataset.movieId;
+    if (!id) return;
+
+    openMovieModalById(id);
   });
 })();

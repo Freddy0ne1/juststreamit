@@ -1,5 +1,6 @@
 // Création de l'url de base
 const url = "http://localhost:8000/api/v1/titles/";
+const urls = "http://localhost:8000/api/v1/titles/?";
 
 // Création de l'url pour le meilleur film et les films les mieux notés
 const urlBestMovie =
